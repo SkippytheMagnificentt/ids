@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  height: 100vh;
 }
 
 .App-logo {
@@ -35,4 +36,47 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.AppContainer {
+  width: 90%;
+  height: 90%;
+  background-color: aliceblue;
+  margin: 0 auto;
+  margin-top: 2.5%;
+  border: 1px solid red;
+  border-radius: 1rem;
+}
+
+.ResourcesContainer {
+  width: 100%;
+  height: 10%;
+  border: 1px solid blue;
+  display: flex;
+  gap: 10px;
+}
+
+.AppMainContainer {
+  width: 100%;
+  height: 90%;
+  display: flex;
+}
+
+.AppActionNav { 
+  width: 15%;
+  height: 100%;
+  border: 1px solid brown;
+  display: block;
+}
+
+.AppActions {
+  width: 70%;
+  height: 100%;
+  border: 1px solid green;
+}
+
+.AppMessages {
+  height: 100%;
+  width: 15%;
+  border: 1px solid darkorange;
 }
