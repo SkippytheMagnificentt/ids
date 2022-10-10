@@ -37,6 +37,12 @@ export default function ActionNav() {
           <ListItemIcon>
             <ContentPaste fontSize="small" />
           </ListItemIcon>
+          <ListItemText>ENERGY</ListItemText>
+        </MenuItem>
+        <MenuItem>
+          <ListItemIcon>
+            <ContentPaste fontSize="small" />
+          </ListItemIcon>
           <ListItemText>BUILDINGS</ListItemText>
         </MenuItem>
         <MenuItem>

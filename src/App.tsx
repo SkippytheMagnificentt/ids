@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ActionNav from './components/ActionNav';
 import Resources from './components/Resources';
 import './App.css';
+import Actions from './components/Actions';
 
 function App() {
+
+  const ActionState = useState('mine')
+
   return (
     <div className="App">
       <div className='AppContainer'>
@@ -17,7 +21,9 @@ function App() {
             />
           </div>
           <div className='AppActions'>
-
+            <Actions
+              ActionState
+            />
           </div>
           <div className='AppMessages'>
           </div>
