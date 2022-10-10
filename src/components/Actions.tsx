@@ -18,6 +18,9 @@ const renderActions = function(param:string) {
     switch ( param) {
         case "mine":
             return <MiningActions />;
+            break;
+        default:
+            return <MiningActions />;
     }
 }
 
@@ -25,7 +28,7 @@ const renderActions = function(param:string) {
 
 
 
-    return (
-        {renderActions(ActionState)}
-    )
+    return (renderActions(ActionState))
+
+    
 }
