@@ -4,9 +4,15 @@ import Resources from './components/Resources';
 import './App.css';
 import Actions from './components/Actions';
 
+
 function App() {
 
-  const ActionState = useState('mine')
+  const [actionState, setActionState] = useState('mine');
+
+  const changeActionState = function(actionStateParam) {
+    setActionState(actionStateParam)
+    console.log(actionState)
+  }
 
   return (
     <div className="App">
@@ -18,11 +24,12 @@ function App() {
         <div className='AppMainContainer'>
           <div className='AppActionNav'>
             <ActionNav
+              changeActionState={changeActionState}
             />
           </div>
           <div className='AppActions'>
             <Actions
-              ActionState
+              actionState
             />
           </div>
           <div className='AppMessages'>

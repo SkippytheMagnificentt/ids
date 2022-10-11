@@ -11,17 +11,22 @@ import ContentCopy from '@mui/icons-material/ContentCopy';
 import ContentPaste from '@mui/icons-material/ContentPaste';
 import Cloud from '@mui/icons-material/Cloud';
 
-export default function ActionNav() {
+export default function ActionNav(props) {
+    const { changeActionState } = props;
   return (
     <Paper sx={{ width: 320, maxWidth: '100%' }}>
       <MenuList>
-        <MenuItem>
+        <MenuItem
+            onClick={() => {changeActionState("mine")}}
+        >
           <ListItemIcon>
             <ContentCut fontSize="small" />
           </ListItemIcon>
           <ListItemText>MINE</ListItemText>
         </MenuItem>
-        <MenuItem>
+        <MenuItem
+             onClick={() => {changeActionState("refine")}}
+        >
           <ListItemIcon>
             <ContentCopy fontSize="small" />
           </ListItemIcon>

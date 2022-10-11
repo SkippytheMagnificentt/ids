@@ -9,7 +9,7 @@ const initialState: CounterState = {
   value: 0,
 }
 
-export const counterRocks = createSlice({
+export const counterIronOre = createSlice({
   name: 'counter',
   initialState,
   reducers: {
@@ -33,6 +33,6 @@ export const counterRocks = createSlice({
 })
 
 // Action creators are generated for each case reducer function
-export const { increment, decrement, incrementByAmount, decrementByAmount } = counterRocks.actions
+export const { increment, decrement, incrementByAmount, decrementByAmount } = counterIronOre.actions
 
-export default counterRocks.reducer
+export default counterIronOre.reducer

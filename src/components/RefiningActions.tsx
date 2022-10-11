@@ -2,10 +2,11 @@ import * as React from 'react';
 import { Box } from '@mui/system';
 import { Button } from '@mui/material';
 import { useSelector, useDispatch } from 'react-redux'
-import { decrement, increment } from '../features/resources/rockCounter'
+import { decrement, increment, decrementByAmount } from '../features/resources/rockCounter'
+import { incrementByAmount } from '../features/resources/ironOreCounter';
 import { RootState } from '../app/store';
 
-export default function MiningActions() {
+export default function RefiningActions() {
 
 const count = useSelector((state: RootState) => state.rockCounter.value)
 const dispatch = useDispatch()
@@ -13,9 +14,12 @@ const dispatch = useDispatch()
     return (
         <Box>
             <Button
-                onClick={() => dispatch(increment())}
+                onClick={() => (
+                    dispatch(decrementByAmount(5)),
+                    dispatch(incrementByAmount(3))
+                    )}
             >
-                Pick up rock
+                Refine Rock
             </Button>
         </Box>
     )

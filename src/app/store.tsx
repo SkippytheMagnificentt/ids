@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit'
 import { counterRocks } from '../features/resources/rockCounter'
+import { counterIronOre } from '../features/resources/ironOreCounter'
 
 export const store = configureStore({
   reducer: {
-    counter: counterRocks.reducer,
+    rockCounter: counterRocks.reducer,
+    ironOreCounter: counterIronOre.reducer
   },
 })
 

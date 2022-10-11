@@ -7,11 +7,12 @@ import { Container } from '@mui/material';
 
 
 export default function Resources() {
-    const count = useSelector((state: RootState) => state.counter.value)
+    const rockCount = useSelector((state: RootState) => state.rockCounter.value)
+    const ironOreCount = useSelector((state: RootState) => state.ironOreCounter.value)
     return(
         <Container sx={{ display: 'flex', gap: 2 }}>
-            <Box> Rock: {count} </Box>
-            <Box> Iron Ore:  </Box>
+            <Box> Rock: {rockCount} </Box>
+            <Box> Iron Ore: {ironOreCount} </Box>
             <Box> Copper Ore:  </Box>
             <Box> Iron Ingots:  </Box>
             <Box> Copper Ingots:  </Box>
