@@ -32,7 +32,9 @@ export default function ActionNav(props) {
           </ListItemIcon>
           <ListItemText>REFINE</ListItemText>
         </MenuItem>
-        <MenuItem>
+        <MenuItem
+            onClick={() => {changeActionState("smelt")}}
+        >
           <ListItemIcon>
             <ContentPaste fontSize="small" />
           </ListItemIcon>
