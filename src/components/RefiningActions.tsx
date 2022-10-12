@@ -8,7 +8,6 @@ import { RootState } from '../app/store';
 
 export default function RefiningActions() {
 
-const count = useSelector((state: RootState) => state.rockCounter.value)
 const dispatch = useDispatch()
 
     return (

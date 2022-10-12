@@ -6,12 +6,11 @@ import Actions from './components/Actions';
 
 
 function App() {
-
+  
+  
   const [actionState, setActionState] = useState('mine');
-
   const changeActionState = function(actionStateParam) {
     setActionState(actionStateParam)
-    console.log(actionState)
   }
 
   return (
@@ -24,12 +23,13 @@ function App() {
         <div className='AppMainContainer'>
           <div className='AppActionNav'>
             <ActionNav
+              actionState={actionState}
               changeActionState={changeActionState}
             />
           </div>
           <div className='AppActions'>
             <Actions
-              actionState
+              actionState={actionState}
             />
           </div>
           <div className='AppMessages'>

@@ -10,7 +10,7 @@ const initialState: CounterState = {
 }
 
 export const counterIronOre = createSlice({
-  name: 'counter',
+  name: 'ironOreCounter',
   initialState,
   reducers: {
     increment: (state) => {

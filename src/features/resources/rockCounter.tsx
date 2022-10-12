@@ -10,7 +10,7 @@ const initialState: CounterState = {
 }
 
 export const counterRocks = createSlice({
-  name: 'counter',
+  name: 'rockCounter',
   initialState,
   reducers: {
     increment: (state) => {
