@@ -40,6 +40,14 @@ export default function ActionNav(props) {
           </ListItemIcon>
           <ListItemText>SMELT</ListItemText>
         </MenuItem>
+        <MenuItem
+            onClick={() => {changeActionState("parts")}}
+        >
+          <ListItemIcon>
+            <ContentPaste fontSize="small" />
+          </ListItemIcon>
+          <ListItemText>PARTS</ListItemText>
+        </MenuItem>
         <MenuItem>
           <ListItemIcon>
             <ContentPaste fontSize="small" />

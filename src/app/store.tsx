@@ -4,6 +4,8 @@ import { counterIronOre } from '../features/resources/ironOreCounter'
 import { counterCopperOre } from '../features/resources/copperOreCounter'
 import { counterCopperIgnot } from '../features/resources/copperIgnotCounter'
 import { counterIgnotOre } from '../features/resources/ironIgnotCounter'
+import { counterMechanicalParts } from '../features/resources/mechanicalPartsCounter'
+import { counterEletricalParts } from '../features/resources/eletricalPartsCounter'
 
 export const store = configureStore({
   reducer: {
@@ -11,7 +13,9 @@ export const store = configureStore({
     ironOreCounter: counterIronOre.reducer,
     copperOreCounter: counterCopperOre.reducer,
     ironIgnotCounter: counterIgnotOre.reducer,
-    copperIgnotCounter: counterCopperIgnot.reducer
+    copperIgnotCounter: counterCopperIgnot.reducer,
+    mechanicalPartsCounter: counterMechanicalParts.reducer,
+    electricalPartsCounter: counterEletricalParts.reducer
   },
 })
 

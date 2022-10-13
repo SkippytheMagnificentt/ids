@@ -11,6 +11,9 @@ export default function Resources() {
     const copperOreCount = useSelector((state: RootState) => state.copperOreCounter.value)
     const ironIngotCount = useSelector((state: RootState) => state.ironIgnotCounter.value)
     const copperIngotCount = useSelector((state: RootState) => state.copperIgnotCounter.value)
+    const mechanicalPartsCount = useSelector((state: RootState) => state.mechanicalPartsCounter.value)
+    const electricalPartsCount = useSelector((state: RootState) => state.electricalPartsCounter.value)
+
     return(
         <Container sx={{ display: 'flex', gap: 2 }}>
             <Box> Rock: {rockCount} </Box>
@@ -18,8 +21,8 @@ export default function Resources() {
             <Box> Copper Ore: {copperOreCount} </Box>
             <Box> Iron Ingots: {ironIngotCount} </Box>
             <Box> Copper Ingots: {copperIngotCount} </Box>
-            <Box> Mechanical Parts:  </Box>
-            <Box> Eletrical Parts:  </Box>
+            <Box> Mechanical Parts: {mechanicalPartsCount}  </Box>
+            <Box> Eletrical Parts: {electricalPartsCount} </Box>
             <Box> Eletricity Supply: </Box>
         </Container>
     )
