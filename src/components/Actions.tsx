@@ -2,6 +2,7 @@ import * as React from 'react';
 import  MiningActions  from './MiningActions';
 import RefiningActions from './RefiningActions';
 import SmeltingActions from './SmeltingActions';
+import PartsActions from './PartsActions';
 
 export default function Actions(props:any) {
 
@@ -15,6 +16,8 @@ const renderActions = function(param:string) {
             return <RefiningActions />;
         case "smelt":
             return <SmeltingActions />
+        case "parts":
+            return <PartsActions />
         default:
             return <MiningActions />;
     }
