@@ -14,7 +14,7 @@ export default function Messages() {
   // }
   return (
     <Paper sx={{ width: 320, maxWidth: '100%' }}>
-      {messages}
+      {messages.map((m) => (<p>{m}</p>))}
     </Paper>
   );
 }
