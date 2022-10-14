@@ -6,6 +6,7 @@ import { counterCopperIgnot } from '../features/resources/copperIgnotCounter'
 import { counterIgnotOre } from '../features/resources/ironIgnotCounter'
 import { counterMechanicalParts } from '../features/resources/mechanicalPartsCounter'
 import { counterEletricalParts } from '../features/resources/eletricalPartsCounter'
+import { manageMessages } from '../features/resources/manageMessages'
 
 export const store = configureStore({
   reducer: {
@@ -15,7 +16,8 @@ export const store = configureStore({
     ironIgnotCounter: counterIgnotOre.reducer,
     copperIgnotCounter: counterCopperIgnot.reducer,
     mechanicalPartsCounter: counterMechanicalParts.reducer,
-    electricalPartsCounter: counterEletricalParts.reducer
+    electricalPartsCounter: counterEletricalParts.reducer,
+    manageMessages: manageMessages.reducer
   },
 })
 

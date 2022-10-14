@@ -3,6 +3,7 @@ import ActionNav from './components/ActionNav';
 import Resources from './components/Resources';
 import './App.css';
 import Actions from './components/Actions';
+import Messages from './components/Messages';
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
             />
           </div>
           <div className='AppMessages'>
+            <Messages />
           </div>
         </div>
       </div>

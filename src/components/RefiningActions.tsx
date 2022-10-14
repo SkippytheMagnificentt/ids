@@ -7,6 +7,7 @@ import { incrementByAmount } from '../features/resources/ironOreCounter';
 import { incrementByAmount as incrementCopperOre } from '../features/resources/copperOreCounter';
 import { refineLogic  } from '../logic/costLogic';
 import { RootState } from '../app/store';
+import { addMessage } from '../features/resources/manageMessages';
 
 export default function RefiningActions() {
 
@@ -19,6 +20,8 @@ const runRefineCalcs = () => {
         dispatch(decrementByAmount(5)),
         dispatch(incrementByAmount(3)),
         dispatch(incrementCopperOre(1))
+    } else {
+        dispatch(addMessage("Inssuficient Rocks for refining."))
     }
 }
 
