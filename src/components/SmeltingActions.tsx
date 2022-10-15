@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Box } from '@mui/system';
-import { Button } from '@mui/material';
+import { breadcrumbsClasses, Button } from '@mui/material';
 import {  useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../app/store';
 import { incrementByAmount as incrementIronIgnot } from '../features/resources/ironIgnotCounter';
@@ -18,18 +18,25 @@ const ironOreCount = useSelector((state: RootState) => state.ironOreCounter.valu
 const copperOreCount = useSelector((state: RootState) => state.copperOreCounter.value)
 
 const runSmeltingCalcs = (resource:string, quantity) => {
-    if (smeltLogic("iron", quantity) === true) {
-        dispatch(decrementIronOre(5)),
-        dispatch(incrementIronIgnot(1))
-    } else {
-        dispatch(addMessage("Inssuficient "+{resource}+" for refining."))
-    }
 
-    if (smeltLogic("copper", quantity) === true) {
-        dispatch(decrementCopperOre(10)),
-        dispatch(incrementCopperIgnot(1))
-    } else {
-        dispatch(addMessage("Inssuficient "+{resource}+" for refining."))
+    switch (resource) { 
+        case "iron":
+            if (smeltLogic(resource, quantity) === true) {
+                dispatch(decrementIronOre(5)),
+                dispatch(incrementIronIgnot(1))
+            } else {
+                dispatch(addMessage("Inssuficient "+ resource +" for refining."))    
+            }
+        break;
+        case "copper":
+            if (smeltLogic(resource, quantity) === true) {
+                dispatch(decrementCopperOre(10)),
+                dispatch(incrementCopperIgnot(1))
+            } else {
+                dispatch(addMessage("Inssuficient "+ resource +" for refining."))
+            }
+        break;
+
     }
 }
 

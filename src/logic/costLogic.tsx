@@ -11,20 +11,22 @@ const refineLogic = (resourceType, resourceCount) => {
 const smeltLogic = (resourceType, resourceCount) => {
     let result = false;
     switch (resourceType) {
-        case "rock":
+        case "iron":
             if (resourceCount < 5) {
                 result = false;
             } else {
                 result = true
             }
-        break;
+            break;
         case "copper":
-            if (resourceCount < 5) {
+            if (resourceCount < 10) {
                 result = false;
             } else {
                 result = true
             }
-        break;
+            break;
+        default:
+            result = false;
 
     }
     return result;
